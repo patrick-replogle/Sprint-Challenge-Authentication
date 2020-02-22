@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-const Jokes = props => {
+const Jokes = () => {
   const [jokes, setJokes] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Jokes = props => {
       });
   }, []);
   return (
-    <div>
+    <div className="dashboard">
       <h1>Why So Serious?</h1>
       {jokes.map(joke => {
         return <p key={joke.id}>{joke.joke}</p>;

@@ -27,7 +27,7 @@ const Register = props => {
   };
 
   return (
-    <>
+    <div className="register">
       <h1>Login Below</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -38,7 +38,7 @@ const Register = props => {
           onChange={handleChange}
         />
         <input
-          type="text"
+          type="password"
           name="password"
           placeholder="password"
           value={loginData.password}
@@ -46,7 +46,7 @@ const Register = props => {
         />
         <button>Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 
