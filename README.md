@@ -40,11 +40,23 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+Sessions allow us to persist state information between pages and requests. The session id would normally be sent in the form of a cookie and the id is used to retrieve existing session data.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+Bcryptjs uses an algorithm that hashes and salts a user’s password on the way in so that sensitive information isn’t stored in plain text on the backend. It ends up being a random looking assortment of characters, letters, and numbers with a algorithm/hash count at the beginning.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+Bcrypt allows developers to exponentially increase and control the number of times a password is hashed. This slows down hackers using rainbow tables or brute force attacks to try and decrypt a users information and gain access to the database. These added passes thru the algorithm will slow the response time from the server to a user’s register￼￼ request, but in turn will also slow down hackers to a point where it’s not worth trying to crack a user’s password.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+Header- this contains the type of token and the algorithm used to generate it
+
+Payload -this is where the actual data that pertains to the user is stored
+
+Signature- this is the sum of the encoded header, payload and algorithm. The signature is used to verify that the sender is who it says it is and that the information within hasn’t changed since since the token was issued.
 
 ## Minimum Viable Product
 
